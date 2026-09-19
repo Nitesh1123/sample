@@ -3,9 +3,9 @@ services:
     image: postgres:16
     restart: unless-stopped
     environment:
-      POSTGRES_USER: docapp
-      POSTGRES_PASSWORD: docapp_pass
-      POSTGRES_DB: docapp_db
+      POSTGRES_USER: docapp****
+      POSTGRES_PASSWORD: ******
+      POSTGRES_DB: docap*****p_db
     ports:
       - "55432:5432"
     volumes:
