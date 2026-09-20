@@ -1,0 +1,239 @@
+﻿{
+    "questions":  {
+                      "total":  7,
+                      "items":  [
+                                    {
+                                        "id":  "cad9dbff-afa4-45c7-8d06-b5bf6bf43159",
+                                        "question_number":  "1.",
+                                        "question_text":  "What is the boiling point of water at sea level?",
+                                        "question_type":  "mcq",
+                                        "options":  [
+                                                        "A) 90Â°C",
+                                                        "B) 100Â°C",
+                                                        "C) 110Â°C",
+                                                        "D) 120Â°C"
+                                                    ],
+                                        "source_pages":  [
+                                                             1
+                                                         ],
+                                        "has_image":  false,
+                                        "extraction_confidence":  0.98,
+                                        "needs_review":  false,
+                                        "review_reason":  null,
+                                        "answer":  {
+                                                       "answer_text":  "B",
+                                                       "is_matched":  true,
+                                                       "match_confidence":  0.98,
+                                                       "source_page":  null
+                                                   }
+                                    },
+                                    {
+                                        "id":  "f6e58411-0993-4c3c-8d9a-8010238d1a9e",
+                                        "question_number":  "2.",
+                                        "question_text":  "Which organ pumps blood throughout the human body?",
+                                        "question_type":  "mcq",
+                                        "options":  [
+                                                        "A) Lungs",
+                                                        "B) Kidney",
+                                                        "C) Heart",
+                                                        "D) Liver"
+                                                    ],
+                                        "source_pages":  [
+                                                             1
+                                                         ],
+                                        "has_image":  false,
+                                        "extraction_confidence":  0.98,
+                                        "needs_review":  false,
+                                        "review_reason":  null,
+                                        "answer":  {
+                                                       "answer_text":  "C",
+                                                       "is_matched":  true,
+                                                       "match_confidence":  0.98,
+                                                       "source_page":  null
+                                                   }
+                                    },
+                                    {
+                                        "id":  "69a71e9c-58cb-4e23-845b-930400604b19",
+                                        "question_number":  "3.",
+                                        "question_text":  "What is the SI unit of force?",
+                                        "question_type":  "mcq",
+                                        "options":  [
+                                                        "A) Joule",
+                                                        "B) Watt",
+                                                        "C) Newton",
+                                                        "D) Pascal"
+                                                    ],
+                                        "source_pages":  [
+                                                             1
+                                                         ],
+                                        "has_image":  false,
+                                        "extraction_confidence":  0.98,
+                                        "needs_review":  false,
+                                        "review_reason":  null,
+                                        "answer":  {
+                                                       "answer_text":  "C",
+                                                       "is_matched":  true,
+                                                       "match_confidence":  0.98,
+                                                       "source_page":  null
+                                                   }
+                                    },
+                                    {
+                                        "id":  "f193c1be-7e32-4e6b-8e75-d7e1c05dc166",
+                                        "question_number":  "4.",
+                                        "question_text":  "Which of these is a prime number?",
+                                        "question_type":  "mcq",
+                                        "options":  [
+                                                        "A) 21",
+                                                        "B) 27",
+                                                        "C) 29",
+                                                        "D) 33"
+                                                    ],
+                                        "source_pages":  [
+                                                             1
+                                                         ],
+                                        "has_image":  false,
+                                        "extraction_confidence":  0.98,
+                                        "needs_review":  false,
+                                        "review_reason":  null,
+                                        "answer":  {
+                                                       "answer_text":  "C",
+                                                       "is_matched":  true,
+                                                       "match_confidence":  0.98,
+                                                       "source_page":  null
+                                                   }
+                                    },
+                                    {
+                                        "id":  "a63889d3-f318-43e9-a140-bc1ec053ab1e",
+                                        "question_number":  "a)",
+                                        "question_text":  "Explain the water cycle in detail.",
+                                        "question_type":  "long_answer",
+                                        "options":  null,
+                                        "source_pages":  [
+                                                             3
+                                                         ],
+                                        "has_image":  true,
+                                        "extraction_confidence":  0.98,
+                                        "needs_review":  false,
+                                        "review_reason":  null,
+                                        "answer":  {
+                                                       "answer_text":  "Water cycle: evaporation, condensation, precipitation, collection â full marks require all four stages explained.",
+                                                       "is_matched":  true,
+                                                       "match_confidence":  0.98,
+                                                       "source_page":  null
+                                                   }
+                                    },
+                                    {
+                                        "id":  "8bf4526e-cea4-4771-92d2-e65ad69c8798",
+                                        "question_number":  "b)",
+                                        "question_text":  "Derive the formula for kinetic energy.",
+                                        "question_type":  "long_answer",
+                                        "options":  null,
+                                        "source_pages":  [
+                                                             3
+                                                         ],
+                                        "has_image":  true,
+                                        "extraction_confidence":  0.98,
+                                        "needs_review":  false,
+                                        "review_reason":  null,
+                                        "answer":  {
+                                                       "answer_text":  "Kinetic energy: KE = 1/2 x m x v^2, derived from work-energy theorem.",
+                                                       "is_matched":  true,
+                                                       "match_confidence":  0.98,
+                                                       "source_page":  null
+                                                   }
+                                    },
+                                    {
+                                        "id":  "e15ed536-cfd7-41cb-935d-6f8c71d42adb",
+                                        "question_number":  "c)",
+                                        "question_text":  "Describe the structure of a plant cell.",
+                                        "question_type":  "long_answer",
+                                        "options":  null,
+                                        "source_pages":  [
+                                                             3
+                                                         ],
+                                        "has_image":  true,
+                                        "extraction_confidence":  0.98,
+                                        "needs_review":  false,
+                                        "review_reason":  null,
+                                        "answer":  {
+                                                       "answer_text":  "Plant cell: cell wall, chloroplast, large central vacuole, nucleus, cytoplasm â award marks per labeled structure.",
+                                                       "is_matched":  true,
+                                                       "match_confidence":  0.98,
+                                                       "source_page":  null
+                                                   }
+                                    }
+                                ]
+                  },
+    "question_paper_status":  {
+                                  "id":  "f66b0703-6440-4833-86b7-063964b966c5",
+                                  "status":  "partially_completed",
+                                  "error_message":  "1 of 3 pages failed to process",
+                                  "total_questions":  7,
+                                  "questions_needing_review":  0
+                              },
+    "answers":  {
+                    "value":  [
+                                  {
+                                      "answer_text":  "B",
+                                      "is_matched":  true,
+                                      "match_confidence":  0.98,
+                                      "source_page":  null
+                                  },
+                                  {
+                                      "answer_text":  "C",
+                                      "is_matched":  true,
+                                      "match_confidence":  0.98,
+                                      "source_page":  null
+                                  },
+                                  {
+                                      "answer_text":  "C",
+                                      "is_matched":  true,
+                                      "match_confidence":  0.98,
+                                      "source_page":  null
+                                  },
+                                  {
+                                      "answer_text":  "C",
+                                      "is_matched":  true,
+                                      "match_confidence":  0.98,
+                                      "source_page":  null
+                                  },
+                                  {
+                                      "answer_text":  "Water cycle: evaporation, condensation, precipitation, collection â full marks require all four stages explained.",
+                                      "is_matched":  true,
+                                      "match_confidence":  0.98,
+                                      "source_page":  null
+                                  },
+                                  {
+                                      "answer_text":  "Kinetic energy: KE = 1/2 x m x v^2, derived from work-energy theorem.",
+                                      "is_matched":  true,
+                                      "match_confidence":  0.98,
+                                      "source_page":  null
+                                  },
+                                  {
+                                      "answer_text":  "Plant cell: cell wall, chloroplast, large central vacuole, nucleus, cytoplasm â award marks per labeled structure.",
+                                      "is_matched":  true,
+                                      "match_confidence":  0.98,
+                                      "source_page":  null
+                                  }
+                              ],
+                    "Count":  7
+                },
+    "meta":  {
+                 "ak_status":  "completed",
+                 "matched_answers":  7,
+                 "exported_at":  "2026-09-20T11:51:51Z",
+                 "total_questions":  null,
+                 "question_paper_id":  "f66b0703-6440-4833-86b7-063964b966c5",
+                 "group_id":  "04592c3f-950d-4104-a9e2-9f9d10bbeefb",
+                 "answer_key_id":  "94f15fed-7d56-4b5a-8f6c-5848be76ca85",
+                 "qp_status":  "partially_completed",
+                 "total_answers":  7
+             },
+    "answer_key_status":  {
+                              "id":  "94f15fed-7d56-4b5a-8f6c-5848be76ca85",
+                              "status":  "completed",
+                              "error_message":  null,
+                              "total_questions":  0,
+                              "questions_needing_review":  0
+                          }
+}

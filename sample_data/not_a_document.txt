@@ -1,0 +1,3 @@
+This is a plain text file used to test invalid-upload rejection.
+It is not a PDF or an image, so the upload endpoint should reject it
+with an appropriate 4xx error rather than processing it.
