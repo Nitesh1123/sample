@@ -3,15 +3,15 @@ services:
     image: postgres:16
     restart: unless-stopped
     environment:
-      POSTGRES_USER: docapp****
-      POSTGRES_PASSWORD: ******
-      POSTGRES_DB: docap*****p_db
+      POSTGRES_USER: docapp
+      POSTGRES_PASSWORD: docapp_pass
+      POSTGRES_DB: docapp_db
     ports:
       - "55432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U docapp"]
+      test: ["CMD-SHELL", "pg_isready -U docapp -d docapp_db"]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -21,6 +21,17 @@ services:
     restart: unless-stopped
     ports:
       - "56379:6379"
+
+  migrate:
+    build: .
+    command: alembic upgrade head
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://docapp:docapp_pass@postgres:5432/docapp_db
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
 
   api:
     build: .
@@ -40,10 +51,12 @@ services:
         condition: service_healthy
       redis:
         condition: service_started
+      migrate:
+        condition: service_completed_successfully
 
   worker:
     build: .
-    command: celery -A app.tasks.celery_app worker --loglevel=info
+    command: celery -A app.tasks.celery_app worker --loglevel=info -Q celery,documents
     volumes:
       - .:/code
     env_file: .env
@@ -53,8 +66,12 @@ services:
       CELERY_BROKER_URL: redis://redis:6379/0
       CELERY_RESULT_BACKEND: redis://redis:6379/1
     depends_on:
-      - postgres
-      - redis
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      migrate:
+        condition: service_completed_successfully
 
 volumes:
   pgdata:
