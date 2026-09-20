@@ -38,3 +38,27 @@ def test_match_answers_with_ocr_mangled_number():
     assert result[0]["is_matched"] is True
     assert result[0]["answer_text"] == "B"
     assert result[0]["match_confidence"] == 0.68
+
+
+def test_match_answers_preserves_roman_and_letter_labels():
+    questions = [
+        {"question_number": "i."},
+        {"question_number": "ii."},
+        {"question_number": "a)"},
+        {"question_number": "b)"},
+    ]
+    answer_key = [
+        {"question_number": "i", "answer_text": "photosynthesis", "confidence": 0.95},
+        {"question_number": "ii", "answer_text": "force equals mass times acceleration", "confidence": 0.95},
+        {"question_number": "a", "answer_text": "water cycle", "confidence": 0.95},
+        {"question_number": "b", "answer_text": "kinetic energy", "confidence": 0.95},
+    ]
+
+    result = match_answers_to_questions(questions, answer_key)
+
+    assert [result[index]["answer_text"] for index in range(4)] == [
+        "photosynthesis",
+        "force equals mass times acceleration",
+        "water cycle",
+        "kinetic energy",
+    ]

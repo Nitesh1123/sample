@@ -31,9 +31,10 @@ def normalize_question_number(raw: str | None) -> str | None:
     s = s.strip()
     if not s:
         return None
-    s = s.translate(OCR_NUMBER_MAP)
-    s = re.sub(r"[^0-9]", "", s)
-    s = s.lstrip("0") or "0"
+    if any(char.isdigit() for char in s):
+        s = s.translate(OCR_NUMBER_MAP)
+        s = re.sub(r"[^0-9]", "", s)
+        return s.lstrip("0") or "0"
     return s
 
 

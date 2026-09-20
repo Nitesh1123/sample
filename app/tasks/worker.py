@@ -226,14 +226,20 @@ def process_document_task(self, document_id: str):
         _match_and_persist_answers_for_document(db, doc, stitched)
         db.commit()
 
-        if failed_pages == 0 and len(stitched) > 0:
+        answer_key_entry_count = sum(
+            len(result.get("answer_key_entries", []))
+            for result in page_results
+        )
+
+        if failed_pages == 0 and (len(stitched) > 0 or answer_key_entry_count > 0):
             doc.status = ProcessingStatus.COMPLETED
-        elif len(stitched) > 0:
+            doc.error_message = None
+        elif len(stitched) > 0 or answer_key_entry_count > 0:
             doc.status = ProcessingStatus.PARTIALLY_COMPLETED
             doc.error_message = f"{failed_pages} of {len(page_image_paths)} pages failed to process"
         else:
             doc.status = ProcessingStatus.FAILED
-            doc.error_message = "No questions could be extracted from this document"
+            doc.error_message = "No questions or answer-key entries could be extracted from this document"
 
         db.commit()
 
